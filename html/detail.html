@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Compiled and minified jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css\pro.css">
+    <link rel="stylesheet" href="/test - search/css/detail.css">
+    
+</head>
+<style>
+    .Image{    
+    
+                width: 250px;
+                height: 250px;
+                /* padding: 1.5rem; */
+                /* border: solid medium; */
+                margin: auto;
+            }
+    
+    .divImage {
+        text-align: center;
+        margin-bottom: 20px
+    }
+    header
+{
+    padding-left: 300px;
+    padding-bottom: 5px;
+    color: white;
+    background: #315377;
+    
+}
+nav
+{
+    background-color: lightgrey;
+   
+}
+nav a
+{
+    color: rgb(14, 13, 13) !important;
+   
+}
+#footer{
+    background: #315377;
+    color: #fff;
+    padding: 30px 0px;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+
+#footer .footer-sidebar i {
+    font-size: 20px;
+    width: 40px;
+}
+
+#footer.footer-sidebar span {
+    display: inline-block;
+}
+
+#footer .col {
+    height: 100%;
+}
+
+#footer p {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#footer a {
+    color: #fff;
+}
+#footer .menu,
+#footer.menu-item {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+}
+
+#footer .menu-item {
+    margin-bottom: 5px;
+}
+
+.page_header {
+    width: 35%;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: #BBBDC0;
+    padding: 10px 0px 10px 0px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+    
+    </style>
+<body onload="javascript:getPageUrlId(),productsDetail();">
+    <header class="container-fluid">
+        <a href="#"> <img src="images/image-product/logo.png" alt=""></a>
+        
+           &#9742; +084 909090343
+         &nbsp; &nbsp; &nbsp;
+         &#128231; fanOfan@group.com
+     </header>
+ 
+     <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Login</a></li>
+            <li>
+                <a href="#" class="btn" data-toggle="modal" data-target="#cart"><i class="bi bi-bag-check-fill"></i>Cart (<span class="total-count"></span>)</a>
+                </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+    
+        <br>
+        <br>
+        <br>
+        <div id="get_data">
+        </div>
+    <div class="row" id="similarProduct"></div>
+    </div>
+
+
+ 
+       <!-- Modal -->
+       <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table">
+                
+              </table>
+              <div>Total price: $<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <a href="checkout.html"><button type="button" class="btn btn-primary">Order now</button></a>
+              <button class="clear-cart btn btn-danger">Clear Cart</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+ <!-- This is footer section -->
+ <footer class="container-fluid " id="footer">
+
+ 
+    <div class="row">  <!--chia row  -->
+
+         <div class="col-lg-2"> <!--margin bottom  -->
+             <img src="images/image-product/logo.png" alt="logo">
+         </div>
+
+        <div class=" col-lg-5 mb-30"><!--margin bottom chia row -->
+            <div class="widget_text">
+                <div class="textwidget">
+
+                 <p>
+                     <i class="bi bi-geo-alt-fill"></i> &nbsp;<span> 590 Cach Mang Thang 8, District 3, Ho Chi Minh City, Viet Nam. </span>
+                </p>
+
+                 <p>
+                     <i class="bi bi-telephone"></i>&nbsp;
+                     <span>+84 (0) 909090343 </span>
+                 </p>
+
+                  <p>
+                     <i class="bi bi-envelope"></i>&nbsp;
+                    <span>fanOfan@group.com</span>
+                 </p>
+
+
+          <a href="#" target="_blank"><i class="bi bi-youtube"></i></a>&nbsp;&nbsp;&nbsp;
+          <a href=""><i class="bi bi-google"></i></a>&nbsp;&nbsp;&nbsp;
+          <a href=""><i class="bi bi-facebook"></i></a>
+         <br>
+         <br>
+         <br>
+
+
+          <p>
+            <small>
+                &copy; 2021 Copyright by FanOFanGROUP – All Rights Reserved
+            </small>
+          </p>
+               
+   
+                    </div>
+             </div>
+         </div>
+      </div>
+  
+
+</footer> 
+
+
+    <script>
+      function clickme(smallImg) {
+
+var fullImg = document.getElementById("imagebox");
+fullImg.src = smallImg.src;
+
+}
+    </script>
+ 
+
+    <script src="js/cuaco.js"></script>
+</body>
+</html>
