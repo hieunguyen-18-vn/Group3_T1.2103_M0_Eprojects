@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../css/homepage1.css">
+<link rel="stylesheet" href="../css/product1.css">
+
+</head>
+<body>
+    <header class="container-fluid">
+      <a href="../index.html"> <img src="../hình/logo.png" alt=""></a>
+       
+          &#9742; +084 909090343
+        &nbsp; &nbsp; &nbsp;
+        &#128231; fanOfan@group.com
+    </header>
+
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+
+          <!-- collapse button -->
+          <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span  class="navbar-toggler-icon"></span>
+          </button>
+
+        <!-- collapse navbar -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html"><span class="bi bi-house"></span>Home</a>
+        </li>
+        <li>
+          <a class="nav-link " href="producttest.html" >Product</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+            <a class="nav-link " href="product1.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">celling fan</a>
+              
+                <a class="dropdown-item" href="html/box-fan.html">Box fan</a>
+                
+                <a class="dropdown-item" href="html/stand-fan.html">stand fan</a>
+                
+                <a class="dropdown-item" href="#">desk fan</a>
+               
+                <a class="dropdown-item" href="#">wall fan</a>
+              
+                <a class="dropdown-item" href="#"> slide fan</a>
+             
+            </div>
+          </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact1.html">Contact us</a>
+          </li>
+      </ul>
+      <ul class="navbar-nav mr">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"><i class="bi bi-person-fill"></i>Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="btn" data-toggle="modal" data-target="#cart"><i class="bi bi-bag-check-fill"></i>Cart (<span class="total-count"></span>)</a>
+          </li>
+      </ul>
+
+    </div>
+    </div>
+    </nav>
+    <!-- Start modal  -->
+ <!-- Modal -->
+ <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="checkout.html"><button type="button" class="btn btn-primary">Order now</button></a>
+      </div>
+    </div>
+  </div>
+</div> 
+<!-- MAIN (Center website) -->
+<div class="main">
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> All Products</button>
+  <button class="btn" onclick="filterSelection('stand')"> Stand fan</button>
+  <button class="btn" onclick="filterSelection('wall')"> Wall fan</button>
+  <button class="btn" onclick="filterSelection('box')"> Box fan</button>
+  <button class="btn" onclick="filterSelection('celling')"> Celling fan</button>
+  <button class="btn" onclick="filterSelection('desk')"> Desk fan</button>
+  <button class="btn" onclick="filterSelection('slide')"> slide fan</button>
+
+</div>
+
+<!-- Portfolio Gallery Grid -->
+
+<div class="row">
+  <div class="column stand">
+    <div class="content">
+        <a href="html/productdetail.html"><img src="../hình/hinh quat/D16028.png" class="card-img-top img-thumbnail" alt="image"></a>
+        
+        <a href="#"><h5>D16028</h5></a>
+        
+        <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="item-rating-total">662</i>
+                        </p>
+                    </div>
+        <p class="card-text">$75.00.</p>
+        <div class="cart"><a href="html/productdetail.html" >View more..</a> </div>
+        <a href="#" data-name="Asia D16028" data-price="75" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+    <div class="column stand">
+        <div class="content">
+            <a href="html/productdetail.html"><img src="../hình/hinh quat/D16021.webp" class="card-img-top img-thumbnail" alt="image"></a>
+            
+            <a href="#"><h5>D16021</h5></a>
+            <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="item-rating-total">400</i>
+                        </p>
+                    </div>
+            <p class="card-text">$75.00.</p>
+            <div class="cart"><a href="html/productdetail.html">View more..</a> </div>
+            <a href="html/productdetail.html" data-name="D16021" data-price="75" class="add-to-cart btn btn-primary">Add to cart</a>
+        </div>
+      </div>
+      <div class="column slide">
+        <div class="content">
+            <a href="html/productdetail.html"><img src="../hình/hinh quat/a16008.webp" class="card-img-top img-thumbnail" alt="image"></a>
+            
+            <a href="#"><h5>A16008</h5></a>
+            <div class="item-rating">
+                            <p>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="item-rating-total">4</i>
+                            </p>
+                        </div>
+            <p class="card-text">$70.00.</p>
+            <div class="cart"><a href="productdetail.html" >View more..</a> </div>
+            <a href="#" data-name="A16008" data-price="70" class="add-to-cart btn btn-primary">Add to cart</a>
+        </div>
+    </div>
+    <div class="column slide">
+      <div class="content">
+          <a href="html/productdetail.html"><img src="../hình/hinh quat/A16009-DV1.webp" class="card-img-top img-thumbnail" alt="image"></a>
+          
+          <a href="#"><h5>A16009-DV1</h5></a>
+          <div class="item-rating">
+                          <p>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star"></i>
+                              <i class="item-rating-total">5</i>
+                          </p>
+                      </div>
+          <p class="card-text">$70.00.</p>
+          <div class="cart"><a href="productdetail.html" >View more..</a> </div>
+          <a href="#" data-name="A16009-DV1" data-price="70" class="add-to-cart btn btn-primary">Add to cart</a>
+      </div>
+  </div>
+  <div class="column slide">
+    <div class="content">
+        <a href="html/productdetail.html"><img src="../hình/hinh quat/quat-lung-a16018.webp" class="card-img-top img-thumbnail" alt="image"></a>
+        
+        <a href="#"><h5>A16018</h5></a>
+        <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="item-rating-total">23</i>
+                        </p>
+                    </div>
+        <p class="card-text">$70.00.</p>
+        <div class="cart"><a href="productdetail.html" >View more..</a> </div>
+        <a href="#" data-name="A16018" data-price="70" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+</div> 
+  <div class="column stand">
+    <div class="content">
+        <a href="html/productdetail.html"><img src="../hình/hinh quat/D16028.png" class="card-img-top img-thumbnail" alt="image"></a>
+        
+        <a href="#"><h5>D16028</h5></a>
+        <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="item-rating-total">1</i>
+                        </p>
+                    </div>
+        <p class="card-text">$75.00.</p>
+        <div class="cart"><a href="productdetail.html" >View more..</a> </div>
+        <a href="#" data-name="D16028" data-price="75" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+  <div class="column stand">
+    <div class="content">
+        <a href="html/productdetail.html"><img src="../hình/hinh quat/DTB1601-XV0_hot1.webp" class="card-img-top img-thumbnail" alt="image"></a>
+        
+        <a href="#"><h5>DTB1601-XV0</h5></a>
+        <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="item-rating-total">112</i>
+                        </p>
+                    </div>
+        <p class="card-text">$25.00.</p>
+        <div class="cart"><a href="html/productdetail.html" >View more..</a> </div>
+        <a href="#" data-name="L18002-DV0 " data-price="25" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+  <div class="column stand">
+    <div class="content">
+        <a href="html/productdetail.html"> <img src="../hình/hinh quat/DTB1601-DV0.webp" class="card-img-top img-thumbnail" alt="image"></a>
+        
+        <a href="#"><h5>DTB1601-DV0</h5></a>
+      
+       <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="item-rating-total">98</i>
+                        </p>
+                    </div>
+        <p class="card-text">$30.00.</p>
+       <div class="cart"><a href="html/productdetail.html">View more..</a> </div>
+       <a href="#" data-name="DTB1601-DV0" data-price="30" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+  
+  <div class="column wall">
+    <div class="content">
+        <a href="html/productdetail.html">  <img src="../hình/hinh quat/L16019-XV0.png" class="card-img-top img-thumbnail" alt="image" ></a>
+        
+        <a href="#"><h5>L16019-XV0</h5></a>
+          
+        <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="item-rating-total">69</i>
+                        </p>
+                    </div>  
+        <p class="card-text">$50.00.</p>
+          <div class="cart"><a href="html/productdetail.html">View more..</a> </div>
+          <a href="#" data-name="L16019-XV0" data-price="50" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+  <div class="column wall">
+    <div class="content">
+        <a href="html/productdetail.html"> <img src="../hình/hinh quat/L18002-1.png" class="card-img-top img-thumbnail" alt="image"></a>
+        
+        <a href="#"><h5>L18002</h5></a>
+         
+       
+        <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="item-rating-total">58</i>
+                        </p>
+                    </div> 
+        <p class="card-text">$26.00.</p>
+         <div class="cart"><a href="html/productdetail.html" >View more..</a> </div>
+         <a href="#" data-name="L18002" data-price="26" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+  <div class="column box">
+    <div class="content">
+        <a href="html/productdetail.html"><img src="../hình/hinh quat/QS1001-SV0.webp" class="card-img-top img-thumbnail" alt="image"></a>
+         
+        <a href="#"><h5>QS1001-SV0</h5></a>
+       
+        <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="item-rating-total">15</i>
+                        </p>
+                    </div>
+        <p class="card-text">$45.00.</p>
+        <div class="cart"><a href="html/productdetail.html">View more..</a> </div>
+        <a href="#" data-name="QS1001-SV0" data-price="45" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+
+  <div class="column box">
+    <div class="content">
+        <a href="#"> <img src="../hình/hinh quat/F16001-XV1.webp" class="card-img-top img-thumbnail"alt="image"></a>
+         
+        <a href="#"><h5>F16001-XV1</h5></a>
+        
+       
+        <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="item-rating-total">7</i>
+                        </p>
+                    </div>
+        <p class="card-text">$60.00.</p>
+        <div class="cart"><a href="View more" >View more..</a> </div>
+        <a href="#" data-name="F16001-XV1" data-price="60" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+  
+  <div class="column desk">
+    <div class="content">
+        <a href="#"> <img src="../hình/hinh quat/quat-ban-ASIAvina-B16001-XV1-2.webp" class="card-img-top img-thumbnail" alt="image" ></a>
+         
+        <a href="#"><h5>B16001-XV1</h5></a>
+        <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="item-rating-total">76</i>
+                        </p>
+                    </div>
+        <p class="card-text">$50.00.</p>
+        <div class="cart"><a href="View more" >View more..</a> </div>
+        <a href="#" data-name="B16001-XV1" data-price="50" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+
+  <div class="column celling">
+    <div class="content">
+        <a href="#" > <img src="../hình/hinh quat/J56004-1.webp" width="100%" height="300px" class="card-img-top"  alt="image" ></a>
+         
+        <a href="#"><h5>J56004</h5></a>
+        <div class="item-rating">
+                        <p>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="item-rating-total">30</i>
+                        </p>
+                    </div>
+        <p class="card-text">$50.00.</p>
+        <div class="cart"><a href="View more" >View more..</a> </div>
+        <a href="#" data-name="J56004" data-price="50" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+
+
+<!-- This is footer section -->
+<footer class="container-fluid " id="footer">
+
+ 
+    <div class="row">  <!--chia row  -->
+
+         <div class="col-lg-2 ta-c mb-30"> <!--margin bottom  -->
+             <img src="../hình/logo.png" alt="logo">
+         </div>
+
+        <div class=" col-lg-5 mb-30"><!--margin bottom chia row -->
+            <div class="widget_text">
+                <div class="textwidget">
+
+                 <p>
+                     <i class="bi bi-geo-alt-fill"></i> &nbsp;<span> 590 Cach Mang Thang 8, District 3, Ho Chi Minh City, Viet Nam. </span>
+                </p>
+
+                 <p>
+                     <i class="bi bi-telephone"></i>&nbsp;
+                     <span>+84 (0) 909090343 </span>
+                 </p>
+
+                  <p>
+                     <i class="bi bi-envelope"></i>&nbsp;
+                    <span>fanOfan@group.com</span>
+                 </p>
+
+
+          <a href="#" target="_blank"><i class="bi bi-youtube"></i></a>&nbsp;&nbsp;&nbsp;
+          <a href=""><i class="bi bi-google"></i></a>&nbsp;&nbsp;&nbsp;
+          <a href=""><i class="bi bi-facebook"></i></a>
+         <br>
+         <br>
+         <br>
+
+
+          <p>
+            <small>
+                &copy; 2021 Copyright by FanOFanGROUP – All Rights Reserved
+            </small>
+          </p>
+               
+   
+                    </div>
+             </div>
+         </div>
+      </div>
+  
+
+</footer> 
+
+<!-- end footer -->
+
+
+
+<script src="../js/filter.js"></script>
+<script src="../js/cart.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+</body>
+</html>
