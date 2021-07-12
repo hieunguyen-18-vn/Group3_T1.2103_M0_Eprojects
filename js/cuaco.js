@@ -515,7 +515,7 @@ function productsDetail()
     }
     if(i==0)
     {
-        d+='<h1 width="500px" height="500px" >Sorry ! Product not found <br><br><a href="brand.html">Click here to return to Brand page</a></h1>';
+        d+='<h1 width="500px" height="500px" >Sorry ! Product not found <br><br><a href="pro.html">Click here to return to Products page</a></h1>';
         $("#title").html("404 NOT FOUND");
     }
 $("#get_data").html(d);
