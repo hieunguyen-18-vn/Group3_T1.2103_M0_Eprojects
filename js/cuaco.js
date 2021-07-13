@@ -495,7 +495,8 @@ function productsDetail()
     '<li>Number speeds: '+ v.Numbeofspeeds+'</li>'+
     ' <li>Switch types: '+ v.Switchtypes+'</li>'+
     '</ul>'+
-//     '<a href="checkout.html"  class="add-to-cart btn btn-primary">Buy now</a>''<a href="checkout.html" data-name="'+v.Name+'" data-price="'+v.Price+'" class="add-to-cart btn btn-primary">Add to cart</a>'+
+//     '<a href="checkout.html"  class="add-to-cart btn btn-primary">Buy now</a>'
+      '<a href="checkout.html" data-name="'+v.Name+'" data-price="'+v.Price+'" class="add-to-cart btn btn-primary">Buy now</a>'
 +
 '</div></div></div>' +
 
