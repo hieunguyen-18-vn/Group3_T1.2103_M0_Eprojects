@@ -495,6 +495,7 @@ function productsDetail()
     '<li>Number speeds: '+ v.Numbeofspeeds+'</li>'+
     ' <li>Switch types: '+ v.Switchtypes+'</li>'+
     '</ul>'+
+    '<a href="../Download_infomation_of_fan/'+v.Name+'_infomations.docx" download><i class="bi bi-download">  Download infomations</i></a><br><br>'+
     '<a href="checkout.html" class="add-to-cart btn btn-primary">Buy now</a>'
    
 +
