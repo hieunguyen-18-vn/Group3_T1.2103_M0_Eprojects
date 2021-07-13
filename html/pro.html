@@ -102,6 +102,30 @@ nav a
     text-transform: uppercase;
     font-size: 24px;
 }
+#ads1{
+  border:none;
+  width:200px;
+  height: 570px;
+  position:absolute;
+  top: 250px;
+  left: 30px;
+}
+#ads2{
+  border:none;
+  width:200px;
+  height: 570px;
+  position:absolute;
+  top: 250px;
+  right: 30px;
+}
+#ads3{
+  border:none;
+  width:100px;
+  height:120px;
+  position:fixed;
+  bottom:50px;
+  right:30px;
+}
 
 </style>
 </head>
@@ -186,8 +210,13 @@ nav a
    
     <br>
     <br>
+    <img id="ads1" src="../hình/bannergrandopen.jpg" alt="ads">
+    <img id="ads2" src="../hình/bannergrandopen.jpg" alt="ads">
+    <img id="ads3" src="../hình/hopqua.png" alt="ads">
     <div class="container">
-        <div id="products"></div>
+        <div id="products">
+          
+        </div>
   </div>
 
 
@@ -245,5 +274,12 @@ nav a
 
    
     <script src="../js/cuaco.js"> </script>
+    <script>
+      $(document).ready(function(){
+        $("#ads3").click(function(){
+          alert("Congratulation, You got a free shipping voucher!")
+        })
+      })
+    </script>
 </body>
 </html>
