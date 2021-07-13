@@ -424,9 +424,12 @@ function productsDetail()
     '                <div class="slider">\n'+
     '                    <div class="product">\n'+
     '\n'+
-    '                        <img src="../hình/image-product/A16009-DV1.png" alt="" onclick="clickme(this)">\n'+
-    '                        <img src="../hình/image-product/F16001-XV1.png" alt="" onclick="clickme(this)">\n'+
-    '                        <img src="../hình/image-product/D16028.png" alt="" onclick="clickme(this)">\n'+
+    '                        <img src="../hình/image-product/'+v.Name+'/'+v.Name+' (1).jpg" alt="" onclick="clickme(this)">\n'+
+    '                        <img src="../hình/image-product/'+v.Name+'/'+v.Name+' (2).jpg" alt="" onclick="clickme(this)">\n'+
+    '                        <img src="../hình/image-product/'+v.Name+'/'+v.Name+' (3).jpg" alt="" onclick="clickme(this)">\n'+
+    '                        <img src="../hình/image-product/'+v.Name+'/'+v.Name+' (4).jpg" alt="" onclick="clickme(this)">\n'+
+    '                        <img src="../hình/image-product/'+v.Name+'/'+v.Name+' (5).jpg" alt="" onclick="clickme(this)">\n'+
+    '                        <img src="../hình/image-product/'+v.Name+'/'+v.Name+' (6).jpg" alt="" onclick="clickme(this)">\n'+
     '                       '+'\n'+
     '                    </div>\n'+
     '                    <div class="preview">\n'+
